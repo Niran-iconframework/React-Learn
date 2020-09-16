@@ -7,10 +7,12 @@ import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'react-redux' 
 //1.เอา provider มามาครอบ app ไว้เวลาใช้ redux
+import Store from './redux/stroe'
+//2.เอา store จากที่แยกไฟล์มา
 ReactDOM.render(
-  <Provider>
+  <Provider store = {Store}>
     <React.StrictMode>
-      <App />
+      <App /> 
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')
